@@ -1,13 +1,129 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "open sans", sans-serif
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+  background: rgb(5,68,104);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 225px;
+  margin: 0px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar .profile h3 {
+  margin: 10px 0 5px;
+  color: white;
+}
+
+.wrapper .sidebar .profile p{
+  color: lightblue;
+  font-size: 14px
+}
+
+.wrapper .sidebar ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 15px 0px;
+  color: rgb(241,237,237);
+  font-size: 16px;
+  position: relative;
+  text-decoration: none;
+  font-family: 'open sans', sans-serif
+}
+
+.wrapper .sidebar ul li a .icon{
+  width: 30px;
+  padding: 0px 25px;
+  margin: 0px 10px;
+  display: inline-block;
+  color: #dee4ec;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+  color: #0c7db1;
+  border-right: 2px solid lightblue;
+  background: white;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+  color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover::before,
+.wrapper .sidebar ul li a.active::before {
+  display: block;
+}
+
+.wrapper .section{
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+  background-color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 3px 10px rgba(132, 93, 93, 0.2);
+}
+
+.wrapper .section .top_navbar .hamburger{
+  font-size: 28px;
+  color: rgb(5, 68, 104);
+  border: none;
+  background: none;
+}
+
+.wrapper .section .top_navbar .hamburger:hover {
+  color: #a3ecff;
+}
+
+.active .wrapper .sidebar {
+  left: -225px;
+}
+
+.main {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+
+.active .wrapper .section,
+.active .main {
+  margin-left: 0;
+  width: 100%;
+}
+
+.displayCards .card{
+  height: 150px;
+  width: 250px;
+  border: none;
+  box-shadow: 0 3px 10px rgba(132, 93, 93, 0.2);
 }
