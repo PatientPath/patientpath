@@ -1,0 +1,60 @@
+DOCTOR'S APPOINTMENT APP USER STORIES
+Intuitive scheduling application for small and independent practices. Allows front office and provider to easily set and change appointments.
+
+Role                        	Task                                                               					Importance
+
+1. As a new provider          I want to register for an account                                   				High
+2. As a new provider          I want to book an appointment (date, time, reason for visit)        				High
+3. As a new provider          I want to be able to check my booked appointment                    				High
+4. As a new provider          I want to be able to to book new or existing patients                    				High                                                                                
+5. As a new provider          I want to be able to cancel my appointment(s)                       				High                       
+6. As a new provider          I want to send phone notifications of upcoming appointments to patients          			Low
+
+7. As a returning provider    I want to be able to login into my account                          				High
+8. As a returning provider    I want to be able to book additional appointments                   				High
+9. As a returning provider    I want to be able to view a booked appointment               					High
+10. As a returning provider   I want to be able to edit reason for visit                         				High
+11. As a returning provider   I want to be able to have daily, weekly and monthly views of upcoming ppointments			Medium
+12. As a returning provider   I want to be able to search booked appointments by patient name or date 				Medium			    
+13. As an returnng provider   I want to see plot graph of my booked appointments 						Low
+                 				
+14. As an administrator       I want to register for an account                                   				High
+15. As an administrator       I want to be able to login into my account  							High
+16. As an administrator       I want access to all appointments                                   				High
+17. As an administrator       I want to I want to book an appointment                          	                                High
+18. As an administrator       I want to check in patient for appointments                         				Medium
+19. As an administrator       I want to be able to mark patient as no-shows                       				Medium
+20. As an administrator       I want to see most recent appointments                             	 			Medium
+21. As an administrator       I want to see oldest appointments                                   				Medium
+22. As an administrator       I want to see plot graph of booked appointments							Low
+
+
+
+Patient JSON:
+{
+"fname": "Jane"
+"lname": "Doe"
+"DOB": "09-11-1990"
+"phone": "707-222-2222"
+"email": "jane_doe123@hotmail.com",
+"newpatient: true,
+"visits": [{date: "12-30-2023", "chief_complaint": "heartburn"}]
+}
+
+Provider JSON:
+{
+"fname": "Jim"
+"lname": "Davis"
+"DOB":	"10-11-1973"
+"phone": "707-333-3333"
+"email": "Liz.davis@patientpath.com"
+"visits": {
+	"new": [{"name": "Jane Doe", date: "12-23-2023", "chief_complaint":"heartburn"}],
+	"existing":[]
+	}
+}
+
+
+
+
+
