@@ -1,8 +1,31 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const Scheduling = () => {
+
+const Scheduling = (props) => {
+    const [ patientType, setPatientType ] = useState('');
+    const [ patientName, setPatientName ] = useState('');
+    const [ providerName, setProviderName ] = useState('');
+    const [date, setDate] = useState('');
+    const [ events, setEvents ] = props.updateEvents;
+
+    console.log(patientType, patientName, providerName, date)
+
+
+    const submitHandler = (e) => {
+        e.preventDefault();  
+        setEvents([...events, {
+            id: 2,
+            title: {patientName},
+            start: {date}
+        }])
+        
+          
+        console.log([patientType, patientName, providerName, date])
+   }
+
     return ( 
         // Appointments Toggle button
         <div className="container main my-3">
@@ -12,89 +35,89 @@ const Scheduling = () => {
                 </button>
             </Link>
 
-            <form>
+            <form  onSubmit={submitHandler}>
                 {/* Radio Buttons */}
-                <div class="form-check form-check-inline my-5">
+                <div className="form-check form-check-inline my-5">
                     <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
-                        name="patient-type"
-                        id=""
-                        value="{3:option1}"
+                        name="patient_type"
+                        id="patient_type"
+                        value="new patient"
+                        onChange={e=>setPatientType(e.target.value)}
+                        required
                     />
-                    <label class="form-check-label" htmlFor="">New Patient</label>
+                    <label className="form-check-label" htmlFor="">New Patient</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div className="form-check form-check-inline">
                     <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
-                        name="patient-type"
-                        id=""
-                        value="option2"
+                        name="patient_type"
+                        id="patient_type"
+                        value="existing patient"
                     />
-                    <label class="form-check-label" htmlFor="">Existing Patient</label>
+                    <label className="form-check-label" htmlFor="">Existing Patient</label>
                 </div>
                 
                 {/*  Select Patient */}
                
-                <div class="mb-3 py-3 px-2 border border-primary rounded">
+                <div className="mb-3 py-3 px-2 border border-primary rounded w-75">
                     <h4>Patient Information</h4>
 
-                    <label htmlFor="" class="form-label">Patient:</label>
+                    <label htmlFor="" className="form-label">Patient:</label>
                     <select
-                    class="form-select form-select-md"
-                    name=""
-                    id=""
+                    className="form-select form-select-md"
+                    name="patientName"
+                    id="patientName"
+                    defaultValue={"default"}
+                    onChange={e=>setPatientName(e.target.value)}
                     >
-                    <option selected>Select...</option>
-                    <option value="">New Delhi</option>
-                    <option value="">Istanbul</option>
-                    <option value="">Jakarta</option>
+                    <option value="default">Select...</option>
+                    <option value="Jane Doe">Jane Doe</option>
+                    <option value="Jeff Doe">Jeff Doe</option>
+                    <option value="Jerry Doe">Jerry Doe</option>
                     </select>
                 </div>
 
                  {/*  Select Appoint Info */}
-                <section class="mb-3 py-3 px-2 border border-primary rounded">
+                <section className="mb-3 py-3 px-2 border border-primary rounded w-75">
                     <h4>Appointment Information</h4>
-                    <div class="mb-3">
-                        <label htmFor="" class="form-label">Doctor:</label>
+                    <div className="mb-3">
+                        <label htmlFor="" className="form-label">Doctor:</label>
                         <select
-                        class="form-select form-select-md"
-                        name=""
-                        id=""
+                        className="form-select form-select-md"
+                        name="providerName"
+                        id="providerName"
+                        defaultValue={'default'}
+                        onChange={e=>setProviderName(e.target.value)}
                         >
-                            <option selected>Select...</option>
-                            <option value="">New Delhi</option>
-                            <option value="">Istanbul</option>
-                            <option value="">Jakarta</option>
+                            <option value={'default'}>Select...</option>
+                            <option value="Dr. Joe Doe">Dr. Jane Doe</option>
+                            <option value="Dr. John Doe">Dr. John Doe</option>
+                            <option value="Dr. Jenny Doe">Dr. Jenny Doe</option>
                         </select>
                     </div>
-
-                    <div class="mb-3">
-                        <label htmlFor="" class="form-label">Date:</label>
-                        <select
-                        class="form-select form-select-md"
-                        name=""
-                        id=""
-                        >
-                            <option selected>Select...</option>
-                            <option value="">New Delhi</option>
-                            <option value="">Istanbul</option>
-                            <option value="">Jakarta</option>
-                        </select>
+                    <div className="mb-3">
+                        <>
+                            <label htmlFor="" className="form-label">Date: </label>
+                            <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
+                            />
+                            {/* <span className="text-danger">{}</span> */}
+                        </>
                     </div>
                 </section>
 
                 <button
                     type="submit"
-                    class="btn btn-primary me-1 "
+                    className="btn btn-primary me-1"
                 >
                     Submit
                 </button>
 
                 <button
                     type="reset"
-                    class="btn btn-info ms-1"
+                    className="btn btn-info ms-1"
                 >
                     Reset
                 </button>
