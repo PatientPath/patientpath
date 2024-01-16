@@ -7,14 +7,23 @@ import Appointments from "./components/shared/Appoinments";
 import Scheduling from "./components/shared/Scheduling";
 import Dashboard from "./components/shared/Dashboard";
 import Notifications from "./components/shared/Notifications";
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 
 function App() {
+  const [patients, setPatients] = useState([]);
   const [ events, setEvents ] = useState( [{
         id: 1,
         title: "Sam Cooke",
         start: "2024-01-17T03:30:00"
       }]);
+
+  useEffect(() => {
+    fetch('/patients.json')
+      .then(response => response.json())
+      .then(data => setPatients(data))
+      .catch(error => console.error('Error fetching patients data:', error));
+  }, []);
 
   return (
     <div>
@@ -23,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/admin" element={<AdminScreen getEvents={events}/>}/>
         <Route path="/providers" element={<ProviderList />}/>
-        <Route path="/patients" element={<PatientList />}/>
+        <Route path="/patients" element={<PatientList patients={patients} />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/appointments"> 
           <Route index path="/appointments" element={<Appointments/> }/>
