@@ -1,0 +1,703 @@
+[
+    {
+      "patientId": "0001",
+      "name": "John Doe",
+      "contact": {
+        "phone": "202-555-0100",
+        "email": "john.doe@example.com"
+      },
+      "address": {
+        "street": "123 Main St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+      },
+      "dateOfBirth": "1980-01-01",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Hypertension"
+        ],
+        "pastConditions": [
+          "Bronchitis"
+        ],
+        "medications": [
+          "Medication A",
+          "Medication B"
+        ],
+        "allergies": [
+          "Peanuts"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Jane Doe",
+        "relation": "Spouse",
+        "phone": "202-555-0101"
+      }
+    },
+    {
+      "patientId": "0002",
+      "name": "Jane Smith",
+      "contact": {
+        "phone": "202-555-0200",
+        "email": "jane.smith@example.com"
+      },
+      "address": {
+        "street": "456 Elm St",
+        "city": "Pasadena",
+        "state": "CA",
+        "zip": "91101"
+      },
+      "dateOfBirth": "1990-03-15",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Diabetes"
+        ],
+        "pastConditions": [
+          "Asthma"
+        ],
+        "medications": [
+          "Medication C"
+        ],
+        "allergies": [
+          "None"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Michael Smith",
+        "relation": "Brother",
+        "phone": "202-555-0201"
+      }
+    },
+    {
+      "patientId": "0003",
+      "name": "David Brown",
+      "contact": {
+        "phone": "202-555-0300",
+        "email": "david.brown@example.com"
+      },
+      "address": {
+        "street": "789 Oak St",
+        "city": "Long Beach",
+        "state": "CA",
+        "zip": "90801"
+      },
+      "dateOfBirth": "1985-05-20",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Allergies"
+        ],
+        "pastConditions": [
+          "Fractured Arm"
+        ],
+        "medications": [
+          "Medication D"
+        ],
+        "allergies": [
+          "Dust"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Emily Brown",
+        "relation": "Wife",
+        "phone": "202-555-0301"
+      }
+    },
+    {
+      "patientId": "0004",
+      "name": "Sarah Johnson",
+      "contact": {
+        "phone": "202-555-0400",
+        "email": "sarah.johnson@example.com"
+      },
+      "address": {
+        "street": "567 Pine St",
+        "city": "Santa Monica",
+        "state": "CA",
+        "zip": "90401"
+      },
+      "dateOfBirth": "1992-07-10",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Migraine"
+        ],
+        "pastConditions": [
+          "Stomach Ulcer"
+        ],
+        "medications": [
+          "Medication E"
+        ],
+        "allergies": [
+          "Shellfish"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Daniel Johnson",
+        "relation": "Husband",
+        "phone": "202-555-0401"
+      }
+    },
+    {
+      "patientId": "0005",
+      "name": "Michael Lee",
+      "contact": {
+        "phone": "202-555-0500",
+        "email": "michael.lee@example.com"
+      },
+      "address": {
+        "street": "890 Maple St",
+        "city": "Glendale",
+        "state": "CA",
+        "zip": "91201"
+      },
+      "dateOfBirth": "1988-11-25",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Arthritis"
+        ],
+        "pastConditions": [
+          "Appendicitis"
+        ],
+        "medications": [
+          "Medication F"
+        ],
+        "allergies": [
+          "Pollen"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Jennifer Lee",
+        "relation": "Wife",
+        "phone": "202-555-0501"
+      }
+    },
+    {
+      "patientId": "0006",
+      "name": "Linda Davis",
+      "contact": {
+        "phone": "202-555-0600",
+        "email": "linda.davis@example.com"
+      },
+      "address": {
+        "street": "234 Cedar St",
+        "city": "Burbank",
+        "state": "CA",
+        "zip": "91501"
+      },
+      "dateOfBirth": "1977-04-05",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "High Cholesterol"
+        ],
+        "pastConditions": [
+          "Broken Leg"
+        ],
+        "medications": [
+          "Medication G"
+        ],
+        "allergies": [
+          "None"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Robert Davis",
+        "relation": "Husband",
+        "phone": "202-555-0601"
+      }
+    },
+    {
+      "patientId": "0007",
+      "name": "William Wilson",
+      "contact": {
+        "phone": "202-555-0700",
+        "email": "william.wilson@example.com"
+      },
+      "address": {
+        "street": "678 Walnut St",
+        "city": "Culver City",
+        "state": "CA",
+        "zip": "90230"
+      },
+      "dateOfBirth": "1982-08-12",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Asthma"
+        ],
+        "pastConditions": [
+          "Herniated Disc"
+        ],
+        "medications": [
+          "Medication H"
+        ],
+        "allergies": [
+          "Cats"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Jessica Wilson",
+        "relation": "Wife",
+        "phone": "202-555-0701"
+      }
+    },
+    {
+      "patientId": "0008",
+      "name": "Emily Garcia",
+      "contact": {
+        "phone": "202-555-0800",
+        "email": "emily.garcia@example.com"
+      },
+      "address": {
+        "street": "345 Oak St",
+        "city": "Torrance",
+        "state": "CA",
+        "zip": "90501"
+      },
+      "dateOfBirth": "1995-12-30",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Anxiety"
+        ],
+        "pastConditions": [
+          "Tonsillitis"
+        ],
+        "medications": [
+          "Medication I"
+        ],
+        "allergies": [
+          "Dogs"
+        ]
+      },
+      "emergencyContact": {
+        "name": "David Garcia",
+        "relation": "Husband",
+        "phone": "202-555-0801"
+      }
+    },
+    {
+      "patientId": "0009",
+      "name": "Christopher Martinez",
+      "contact": {
+        "phone": "202-555-0900",
+        "email": "christopher.martinez@example.com"
+      },
+      "address": {
+        "street": "123 Pine St",
+        "city": "Inglewood",
+        "state": "CA",
+        "zip": "90301"
+      },
+      "dateOfBirth": "1989-09-18",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Diabetes"
+        ],
+        "pastConditions": [
+          "Sinusitis"
+        ],
+        "medications": [
+          "Medication J"
+        ],
+        "allergies": [
+          "Pollen"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Elizabeth Martinez",
+        "relation": "Wife",
+        "phone": "202-555-0901"
+      }
+    },
+    {
+      "patientId": "0010",
+      "name": "Mary Adams",
+      "contact": {
+        "phone": "202-555-1000",
+        "email": "mary.adams@example.com"
+      },
+      "address": {
+        "street": "456 Cedar St",
+        "city": "Glendale",
+        "state": "CA",
+        "zip": "91202"
+      },
+      "dateOfBirth": "1975-02-22",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "High Blood Pressure"
+        ],
+        "pastConditions": [
+          "Pneumonia"
+        ],
+        "medications": [
+          "Medication K"
+        ],
+        "allergies": [
+          "Nuts"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Joseph Adams",
+        "relation": "Husband",
+        "phone": "202-555-1001"
+      }
+    },
+    {
+      "patientId": "0011",
+      "name": "Richard White",
+      "contact": {
+        "phone": "202-555-1100",
+        "email": "richard.white@example.com"
+      },
+      "address": {
+        "street": "789 Elm St",
+        "city": "Beverly Hills",
+        "state": "CA",
+        "zip": "90210"
+      },
+      "dateOfBirth": "1984-06-14",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Asthma"
+        ],
+        "pastConditions": [
+          "Appendectomy"
+        ],
+        "medications": [
+          "Medication L"
+        ],
+        "allergies": [
+          "Shellfish"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Catherine White",
+        "relation": "Wife",
+        "phone": "202-555-1101"
+      }
+    },
+    {
+      "patientId": "0012",
+      "name": "Jessica Harris",
+      "contact": {
+        "phone": "202-555-1200",
+        "email": "jessica.harris@example.com"
+      },
+      "address": {
+        "street": "234 Maple St",
+        "city": "Santa Monica",
+        "state": "CA",
+        "zip": "90402"
+      },
+      "dateOfBirth": "1990-12-05",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Migraine"
+        ],
+        "pastConditions": [
+          "Broken Arm"
+        ],
+        "medications": [
+          "Medication M"
+        ],
+        "allergies": [
+          "Cats"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Daniel Harris",
+        "relation": "Husband",
+        "phone": "202-555-1201"
+      }
+    },
+    {
+      "patientId": "0013",
+      "name": "Kevin Martinez",
+      "contact": {
+        "phone": "202-555-1300",
+        "email": "kevin.martinez@example.com"
+      },
+      "address": {
+        "street": "345 Walnut St",
+        "city": "Pasadena",
+        "state": "CA",
+        "zip": "91101"
+      },
+      "dateOfBirth": "1987-11-29",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "High Cholesterol"
+        ],
+        "pastConditions": [
+          "Tonsillitis"
+        ],
+        "medications": [
+          "Medication N"
+        ],
+        "allergies": [
+          "Dust"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Linda Martinez",
+        "relation": "Wife",
+        "phone": "202-555-1301"
+      }
+    },
+    {
+      "patientId": "0014",
+      "name": "Karen Anderson",
+      "contact": {
+        "phone": "202-555-1400",
+        "email": "karen.anderson@example.com"
+      },
+      "address": {
+        "street": "567 Oak St",
+        "city": "Torrance",
+        "state": "CA",
+        "zip": "90502"
+      },
+      "dateOfBirth": "1983-03-20",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Hypertension"
+        ],
+        "pastConditions": [
+          "Asthma"
+        ],
+        "medications": [
+          "Medication O"
+        ],
+        "allergies": [
+          "Pollen"
+        ]
+      },
+      "emergencyContact": {
+        "name": "James Anderson",
+        "relation": "Husband",
+        "phone": "202-555-1401"
+      }
+    },
+    {
+      "patientId": "0015",
+      "name": "Daniel Wilson",
+      "contact": {
+        "phone": "202-555-1500",
+        "email": "daniel.wilson@example.com"
+      },
+      "address": {
+        "street": "123 Cedar St",
+        "city": "Inglewood",
+        "state": "CA",
+        "zip": "90302"
+      },
+      "dateOfBirth": "1994-09-12",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Anxiety"
+        ],
+        "pastConditions": [
+          "Stomach Ulcer"
+        ],
+        "medications": [
+          "Medication P"
+        ],
+        "allergies": [
+          "Shellfish"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Mary Wilson",
+        "relation": "Wife",
+        "phone": "202-555-1501"
+      }
+    },
+    {
+      "patientId": "0016",
+      "name": "Patricia Hernandez",
+      "contact": {
+        "phone": "202-555-1600",
+        "email": "patricia.hernandez@example.com"
+      },
+      "address": {
+        "street": "890 Birch St",
+        "city": "Beverly Hills",
+        "state": "CA",
+        "zip": "90210"
+      },
+      "dateOfBirth": "1991-08-17",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Eczema"
+        ],
+        "pastConditions": [
+          "Chickenpox"
+        ],
+        "medications": [
+          "Medication Q"
+        ],
+        "allergies": [
+          "Latex"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Eduardo Hernandez",
+        "relation": "Brother",
+        "phone": "202-555-1601"
+      }
+    },
+    {
+      "patientId": "0017",
+      "name": "Brian Taylor",
+      "contact": {
+        "phone": "202-555-1700",
+        "email": "brian.taylor@example.com"
+      },
+      "address": {
+        "street": "345 Redwood St",
+        "city": "Pasadena",
+        "state": "CA",
+        "zip": "91101"
+      },
+      "dateOfBirth": "1986-12-24",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Reflux"
+        ],
+        "pastConditions": [
+          "Tonsillectomy"
+        ],
+        "medications": [
+          "Medication R"
+        ],
+        "allergies": [
+          "Ibuprofen"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Sara Taylor",
+        "relation": "Sister",
+        "phone": "202-555-1701"
+      }
+    },
+    {
+      "patientId": "0018",
+      "name": "Sophia Martinez",
+      "contact": {
+        "phone": "202-555-1800",
+        "email": "sophia.martinez@example.com"
+      },
+      "address": {
+        "street": "678 Cedar St",
+        "city": "Santa Monica",
+        "state": "CA",
+        "zip": "90401"
+      },
+      "dateOfBirth": "1993-03-30",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Asthma"
+        ],
+        "pastConditions": [
+          "Fracture"
+        ],
+        "medications": [
+          "Medication S"
+        ],
+        "allergies": [
+          "Aspirin"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Carlos Martinez",
+        "relation": "Father",
+        "phone": "202-555-1801"
+      }
+    },
+    {
+      "patientId": "0019",
+      "name": "Alice King",
+      "contact": {
+        "phone": "202-555-1900",
+        "email": "alice.king@example.com"
+      },
+      "address": {
+        "street": "123 Maple St",
+        "city": "Glendale",
+        "state": "CA",
+        "zip": "91201"
+      },
+      "dateOfBirth": "1989-07-21",
+      "gender": "Female",
+      "medicalHistory": {
+        "currentConditions": [
+          "Hypothyroidism"
+        ],
+        "pastConditions": [
+          "Anemia"
+        ],
+        "medications": [
+          "Medication T"
+        ],
+        "allergies": [
+          "Penicillin"
+        ]
+      },
+      "emergencyContact": {
+        "name": "George King",
+        "relation": "Father",
+        "phone": "202-555-1901"
+      }
+    },
+    {
+      "patientId": "0020",
+      "name": "George Green",
+      "contact": {
+        "phone": "202-555-2000",
+        "email": "george.green@example.com"
+      },
+      "address": {
+        "street": "456 Birch St",
+        "city": "Burbank",
+        "state": "CA",
+        "zip": "91501"
+      },
+      "dateOfBirth": "1978-05-25",
+      "gender": "Male",
+      "medicalHistory": {
+        "currentConditions": [
+          "Back Pain"
+        ],
+        "pastConditions": [
+          "Kidney Stones"
+        ],
+        "medications": [
+          "Medication U"
+        ],
+        "allergies": [
+          "Gluten"
+        ]
+      },
+      "emergencyContact": {
+        "name": "Helen Green",
+        "relation": "Wife",
+        "phone": "202-555-2001"
+      }
+    }
+  ]
