@@ -12,11 +12,12 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [patients, setPatients] = useState([]);
-  const [ events, setEvents ] = useState( [{
+  const [ events, setEvents ] = useState([{
         id: 1,
         title: "Sam Cooke",
         start: "2024-01-17T03:30:00"
       }]);
+  const [ event, setEvent ] = useState({})
 
   useEffect(() => {
     fetch('/patients.json')
@@ -30,13 +31,13 @@ function App() {
       {/* <h1>Patient Path</h1> */}
       <Navbar/>
       <Routes>
-        <Route path="/admin" element={<AdminScreen getEvents={events}/>}/>
+        <Route path="/admin" element={<AdminScreen getEvents={events} getEvent={event}/>}/>
         <Route path="/providers" element={<ProviderList />}/>
         <Route path="/patients" element={<PatientList patients={patients} />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/appointments"> 
           <Route index path="/appointments" element={<Appointments/> }/>
-          <Route path="scheduling" element={<Scheduling updateEvents={[events, setEvents]}/> }/>
+          <Route path="scheduling" element={<Scheduling updateEvents={[events, setEvents]} updateEvent={[event, setEvent]}/> }/>
         </Route>
         <Route path="/notifications" element={<Notifications />}/>
       </Routes>
