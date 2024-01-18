@@ -16,12 +16,12 @@ const Scheduling = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();  
-        setEvents([...events, {
+        const newEvents = [...events, {
             id: 2,
             title: {patientName},
             start: {date}
-        }])
-        
+        }]
+        setEvents(newEvents)
           
         console.log([patientType, patientName, providerName, date])
    }
@@ -102,6 +102,7 @@ const Scheduling = (props) => {
                         <>
                             <label htmlFor="" className="form-label">Date: </label>
                             <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
+                            required
                             />
                             {/* <span className="text-danger">{}</span> */}
                         </>

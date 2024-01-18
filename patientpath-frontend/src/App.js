@@ -12,17 +12,20 @@ import React, { useEffect, useState } from 'react';
 
 function App() {
   const [patients, setPatients] = useState([]);
-  const [ events, setEvents ] = useState( [{
-        id: 1,
-        title: "Sam Cooke",
-        start: "2024-01-17T03:30:00"
-      }]);
+  const [ events, setEvents ] = useState([]);
 
   useEffect(() => {
     fetch('/patients.json')
       .then(response => response.json())
       .then(data => setPatients(data))
       .catch(error => console.error('Error fetching patients data:', error));
+  }, []);
+
+  useEffect(() => {
+    fetch('/events.json')
+      .then(response => response.json())
+      .then(data => setEvents(data))
+      .catch(error => console.error('Error fetching events data:', error));
   }, []);
 
   return (
@@ -35,7 +38,7 @@ function App() {
         <Route path="/patients" element={<PatientList patients={patients} />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
         <Route path="/appointments"> 
-          <Route index path="/appointments" element={<Appointments/> }/>
+          <Route index path="/appointments" element={<Appointments getEvents={events}/> }/>
           <Route path="scheduling" element={<Scheduling updateEvents={[events, setEvents]}/> }/>
         </Route>
         <Route path="/notifications" element={<Notifications />}/>
