@@ -22,27 +22,3 @@ const Calendar = (props) => {
 }
  
 export default Calendar;
-
-
-// class Calendar extends React.Component {
-//     calendarRef = React.createRef()
-
-//     setEvents(){
-//         let calendarApi = this.calendarRef.current.getApi()
-//         calendarApi.updateEvents(this.props.getEvents)
-//     }
-
-//     componentDidUpdate()
-
-//     render() {
-//         return (
-//             <FullCalendar 
-//             ref={this.calendarRef} 
-//             plugins={[ dayGridPlugin ]} initialView="dayGridMonth"
-//             events={[]}
-//             />
-//         )
-//     }
-
-    
-// }
