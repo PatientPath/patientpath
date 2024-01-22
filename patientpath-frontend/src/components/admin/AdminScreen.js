@@ -1,6 +1,7 @@
 import Calendar from '../shared/Calendar';
 
 const AdminScreen = (props) => {
+    // console.log('Admin', props)
     return ( 
         <div className='main'>
              {/* Cards */}
@@ -34,7 +35,7 @@ const AdminScreen = (props) => {
             </section>
             {/* Calendar */}
             <section className="mt-5">
-                <Calendar getEvents={props.getEvents}/>
+                <Calendar getEvents={props.getEvents} getEvent={props.getEvent}/>
             </section>
         </div>
      );

@@ -1,24 +1,34 @@
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 const Calendar = (props) => {
-    // const calendarRef = useRef();
-    // const calendar =  calendarRef.current.calendar
-     
+    // console.log(props.getEvent)
+    // console.log("Calendar", new Event(props.getEvent))
+    const updateEvents = () => [...props.getEvents, new Event(props.getEvent).props]
    
     return ( 
         <div className="container">
             {/* {props.getEvents[0].start.date} */}
             <section>
                 <FullCalendar
-                    // ref={calendarRef} 
                     plugins={[ dayGridPlugin ]} initialView="dayGridMonth"
-                    events={props.getEvents}
+                    events={updateEvents()}
                 />
             </section>
         </div>
      );
+}
+
+class Event extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {id: props.id,
+        title: props.title, start: props.start}
+    }
+    render(){
+        return null
+    }
 }
  
 export default Calendar;

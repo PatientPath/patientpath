@@ -10,18 +10,21 @@ const Scheduling = (props) => {
     const [ providerName, setProviderName ] = useState('');
     const [date, setDate] = useState('');
     const [ events, setEvents ] = props.updateEvents;
+    const [ event, setEvent ] = props.updateEvent;
 
     console.log(patientType, patientName, providerName, date)
 
 
     const submitHandler = (e) => {
-        e.preventDefault();  
-        const newEvents = [...events, {
+        e.preventDefault();
+     
+        setEvent({
             id: 2,
-            title: {patientName},
-            start: {date}
-        }]
-        setEvents(newEvents)
+            title: patientName,
+            start: date
+        })
+        
+        setEvents([...events, event])
           
         console.log([patientType, patientName, providerName, date])
    }
@@ -56,6 +59,7 @@ const Scheduling = (props) => {
                         name="patient_type"
                         id="patient_type"
                         value="existing patient"
+                        onChange={e=>setPatientType(e.target.value)}
                     />
                     <label className="form-check-label" htmlFor="">Existing Patient</label>
                 </div>
