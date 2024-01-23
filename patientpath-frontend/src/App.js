@@ -9,6 +9,8 @@ import Dashboard from "./components/shared/Dashboard";
 import Notifications from "./components/shared/Notifications";
 
 import React, { useEffect, useState } from 'react';
+import Login from "./components/shared/Login";
+import Register from "./components/shared/Register";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -34,6 +36,8 @@ function App() {
         <Route path="/providers" element={<ProviderList />}/>
         <Route path="/patients" element={<PatientList patients={patients} />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Register />} />
         <Route path="/appointments"> 
           <Route index path="/appointments" element={<Appointments/> }/>
           <Route path="scheduling" element={<Scheduling updateEvents={[events, setEvents]}/> }/>
