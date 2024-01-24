@@ -104,7 +104,16 @@ const Scheduling = (props) => {
                     </div>
                     <div className="mb-3">
                         <>
-                            <label htmlFor="" className="form-label">Date: </label>
+                            <label htmlFor="" className="form-label">Start Date: </label>
+                            <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
+                            required
+                            />
+                            {/* <span className="text-danger">{}</span> */}
+                        </>
+                    </div>
+                    <div className="mb-3">
+                        <>
+                            <label htmlFor="" className="form-label">End Date: </label>
                             <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
                             required
                             />

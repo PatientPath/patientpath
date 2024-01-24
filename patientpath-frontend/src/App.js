@@ -9,6 +9,7 @@ import Dashboard from "./components/shared/Dashboard";
 import Notifications from "./components/shared/Notifications";
 
 import React, { useEffect, useState } from 'react';
+import Home from "./components/shared/Home";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -38,6 +39,7 @@ function App() {
       {/* <h1>Patient Path</h1> */}
       <Navbar/>
       <Routes>
+        <Route path="/" element={<Home />}/>
         <Route path="/admin" element={<AdminScreen getEvents={events} getEvent={event}/>}/>
         <Route path="/providers" element={<ProviderList />}/>
         <Route path="/patients" element={<PatientList patients={patients} />}/>
