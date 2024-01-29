@@ -103,8 +103,7 @@ const AddProviderForm = () => {
                     />
                 </div>
 
-                {/* Work Schedule Inputs (for each day of the week) */}
-                {/* Example for Monday */}
+                {/* Work Schedule Inputs for each day of the week */}
                 <div className="mb-3">
                     <label htmlFor="mondaySchedule" className="form-label">Monday Schedule:</label>
                     <input
@@ -117,7 +116,7 @@ const AddProviderForm = () => {
                         onChange={handleChange}
                     />
                 </div>
-                {/* Repeat for other days of the week */}
+               
                 <div className="mb-3">
                     <label htmlFor="tuesdaySchedule" className="form-label">Tuesday Schedule:</label>
                     <input
