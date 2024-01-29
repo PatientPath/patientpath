@@ -5,16 +5,13 @@ const ProviderList = ({ providers }) => {
     const [numPerPage, setNumPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
     const [activeTab, setActiveTab] = useState('providers');
+    const [viewOption, setViewOption] = useState('10');
 
     const handleViewOptionChange = (e) => {
         const value = e.target.value;
         setNumPerPage(value === "10" ? 10 : providers.length);
         setCurrentPage(1);
-    };
-
-    const updateSelection = (value) => {
-        document.getElementById('viewOption').value = value;
-        handleViewOptionChange({ target: { value } });
+        setViewOption(value);
     };
 
     const totalPages = Math.ceil(providers.length / numPerPage);
@@ -70,8 +67,12 @@ const ProviderList = ({ providers }) => {
                             {numPerPage === providers.length ? "View All" : "View 10"}
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><button className="dropdown-item" onClick={() => updateSelection("10")}>View 10</button></li>
-                            <li><button className="dropdown-item" onClick={() => updateSelection("all")}>View All</button></li>
+                        <li>
+                            <button className="dropdown-item" onClick={() => handleViewOptionChange({ target: { value: "10" } })}>View 10</button>
+                        </li>
+                        <li>
+                            <button className="dropdown-item" onClick={() => handleViewOptionChange({ target: { value: "all" } })}>View All</button>
+                        </li>
                         </ul>
                     </div>
                 </div>
