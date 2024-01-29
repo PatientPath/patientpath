@@ -1,0 +1,250 @@
+[
+      {
+        "providerId": "D001",
+        "name": "Dr. Sarah Smith",
+        "contact": {
+          "phone": "202-555-0200",
+          "email": "sarah.smith@medicalcenter.com"
+        },
+        "specialization": "Cardiology",
+        "yearsOfExperience": 10,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "8am - 4pm",
+          "wednesday": "8am - 4pm",
+          "thursday": "8am - 4pm",
+          "friday": "8am - 3pm",
+          "saturday": "On Call",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D002",
+        "name": "Dr. Mike Johnson",
+        "contact": {
+          "phone": "202-555-0201",
+          "email": "mike.johnson@medicalcenter.com"
+        },
+        "specialization": "Neurology",
+        "yearsOfExperience": 8,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "9am - 5pm",
+          "wednesday": "On Call",
+          "thursday": "9am - 5pm",
+          "friday": "9am - 4pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D003",
+        "name": "Dr. Emily Davis",
+        "contact": {
+          "phone": "202-555-0202",
+          "email": "emily.davis@medicalcenter.com"
+        },
+        "specialization": "Pediatrics",
+        "yearsOfExperience": 5,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "On Call",
+          "wednesday": "8am - 4pm",
+          "thursday": "8am - 4pm",
+          "friday": "8am - 3pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D004",
+        "name": "Dr. John Anderson",
+        "contact": {
+          "phone": "202-555-0203",
+          "email": "john.anderson@medicalcenter.com"
+        },
+        "specialization": "Orthopedics",
+        "yearsOfExperience": 12,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "9am - 5pm",
+          "wednesday": "9am - 5pm",
+          "thursday": "On Call",
+          "friday": "9am - 4pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D005",
+        "name": "Dr. Lisa Martinez",
+        "contact": {
+          "phone": "202-555-0204",
+          "email": "lisa.martinez@medicalcenter.com"
+        },
+        "specialization": "Dermatology",
+        "yearsOfExperience": 7,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "8am - 4pm",
+          "wednesday": "8am - 4pm",
+          "thursday": "On Call",
+          "friday": "8am - 3pm",
+          "saturday": "On Call",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D006",
+        "name": "Dr. Robert Lewis",
+        "contact": {
+          "phone": "202-555-0205",
+          "email": "robert.lewis@medicalcenter.com"
+        },
+        "specialization": "Oncology",
+        "yearsOfExperience": 9,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "On Call",
+          "wednesday": "9am - 5pm",
+          "thursday": "9am - 5pm",
+          "friday": "9am - 4pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D007",
+        "name": "Dr. Jennifer White",
+        "contact": {
+          "phone": "202-555-0206",
+          "email": "jennifer.white@medicalcenter.com"
+        },
+        "specialization": "Gynecology",
+        "yearsOfExperience": 6,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "On Call",
+          "wednesday": "8am - 4pm",
+          "thursday": "8am - 4pm",
+          "friday": "On Call",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D008",
+        "name": "Dr. David Clark",
+        "contact": {
+          "phone": "202-555-0207",
+          "email": "david.clark@medicalcenter.com"
+        },
+        "specialization": "ENT (Otolaryngology)",
+        "yearsOfExperience": 11,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "9am - 5pm",
+          "wednesday": "9am - 5pm",
+          "thursday": "On Call",
+          "friday": "On Call",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D009",
+        "name": "Dr. Karen Adams",
+        "contact": {
+          "phone": "202-555-0208",
+          "email": "karen.adams@medicalcenter.com"
+        },
+        "specialization": "Urology",
+        "yearsOfExperience": 10,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "8am - 4pm",
+          "wednesday": "8am - 4pm",
+          "thursday": "On Call",
+          "friday": "8am - 3pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D010",
+        "name": "Dr. Mark Taylor",
+        "contact": {
+          "phone": "202-555-0209",
+          "email": "mark.taylor@medicalcenter.com"
+        },
+        "specialization": "Psychiatry",
+        "yearsOfExperience": 7,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "9am - 5pm",
+          "wednesday": "9am - 5pm",
+          "thursday": "9am - 5pm",
+          "friday": "On Call",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D011",
+        "name": "Dr. Laura Wilson",
+        "contact": {
+          "phone": "202-555-0210",
+          "email": "laura.wilson@medicalcenter.com"
+        },
+        "specialization": "Internal Medicine",
+        "yearsOfExperience": 12,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "8am - 4pm",
+          "wednesday": "8am - 4pm",
+          "thursday": "8am - 4pm",
+          "friday": "8am - 3pm",
+          "saturday": "On Call",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D012",
+        "name": "Dr. James Brown",
+        "contact": {
+          "phone": "202-555-0211",
+          "email": "james.brown@medicalcenter.com"
+        },
+        "specialization": "Allergy & Immunology",
+        "yearsOfExperience": 9,
+        "workSchedule": {
+          "monday": "9am - 5pm",
+          "tuesday": "On Call",
+          "wednesday": "9am - 5pm",
+          "thursday": "9am - 5pm",
+          "friday": "9am - 4pm",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      },
+      {
+        "providerId": "D013",
+        "name": "Dr. Susan Lee",
+        "contact": {
+          "phone": "202-555-0212",
+          "email": "susan.lee@medicalcenter.com"
+        },
+        "specialization": "Rheumatology",
+        "yearsOfExperience": 7,
+        "workSchedule": {
+          "monday": "8am - 4pm",
+          "tuesday": "On Call",
+          "wednesday": "8am - 4pm",
+          "thursday": "8am - 4pm",
+          "friday": "On Call",
+          "saturday": "Off",
+          "sunday": "Off"
+        }
+      }
+    ]
+  

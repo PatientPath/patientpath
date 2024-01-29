@@ -12,8 +12,8 @@ const Appointments = () => {
                     <FontAwesomeIcon icon={faList} /> Add Appointment
                 </button>
             </Link>
-            
-            <table  
+
+            <table
                 className="table table-striped table-hover table-borderless table-primary align-middle"
             >
                 <thead className="table-light">
