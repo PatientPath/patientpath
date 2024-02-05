@@ -7,6 +7,8 @@ import Appointments from "./components/shared/Appoinments";
 import Scheduling from "./components/shared/Scheduling";
 import Dashboard from "./components/shared/Dashboard";
 import Notifications from "./components/shared/Notifications";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 
 import React, { useEffect, useState } from 'react';
 import Home from "./components/shared/Home";
@@ -40,6 +42,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />}/>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<AdminScreen getEvents={events} getEvent={event}/>}/>
         <Route path="/providers" element={<ProviderList />}/>
         <Route path="/patients" element={<PatientList patients={patients} />}/>

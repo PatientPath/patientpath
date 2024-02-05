@@ -127,3 +127,7 @@ body {
   border: none;
   box-shadow: 0 3px 10px rgba(132, 93, 93, 0.2);
 }
+
+.rolebtn{
+  border: none
+}
