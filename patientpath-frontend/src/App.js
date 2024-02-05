@@ -52,8 +52,6 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<AdminScreen getEvents={events} getEvent={event}/>}/>
-        <Route path="/providers" element={<ProviderList />}/>
-        <Route path="/admin" element={<AdminScreen getEvents={events}/>}/>
         <Route path="/providers" element={<ProviderList providers={providers} />}/>
         <Route path="/patients" element={<PatientList patients={patients} />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
