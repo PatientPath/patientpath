@@ -40,7 +40,7 @@ const Scheduling = (props) => {
 
             <form  onSubmit={submitHandler}>
                 {/* Radio Buttons */}
-                <div className="form-check form-check-inline my-5">
+                <div className="form-check form-check-inline my-3">
                     <input
                         className="form-check-input"
                         type="radio"
@@ -102,18 +102,15 @@ const Scheduling = (props) => {
                             <option value="Dr. Jenny Doe">Dr. Jenny Doe</option>
                         </select>
                     </div>
-                    <div className="mb-3">
+                    <div className="d-flex justify-content-center mb-3">
                         <>
-                            <label htmlFor="" className="form-label">Start Date: </label>
+                            <label htmlFor="" className="form-label me-2">Start Date: </label>
                             <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
                             required
                             />
                             {/* <span className="text-danger">{}</span> */}
-                        </>
-                    </div>
-                    <div className="mb-3">
-                        <>
-                            <label htmlFor="" className="form-label">End Date: </label>
+
+                            <label htmlFor="" className="form-label me-2">End Date: </label>
                             <input id="date_time" name="date_time" type="datetime-local" onChange={e=>setDate(e.target.value)}
                             required
                             />

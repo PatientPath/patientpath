@@ -1,11 +1,9 @@
 const express = require('express');
 const app = express();
 const patients = require('../patientpath-frontend/public/patients.json')
-const dotenv = require("dotenv")
+const dotenv = require("dotenv").config()
 const PORT = process.env.PORT || 5000;
 
-
-dotenv.config();
 
 app.get('/', (req, res) => {
     res.send('Patient Path Root')
