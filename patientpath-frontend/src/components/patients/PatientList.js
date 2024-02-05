@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import AddPatientForm from './AddPatientForm';
 
 const PatientList = ({ patients }) => {
     const [numPerPage, setNumPerPage] = useState(10);
     const [currentPage, setCurrentPage] = useState(1);
+    const [activeTab, setActiveTab] = useState('patients');
+
 
     const handleViewOptionChange = (e) => {
         const value = e.target.value;
@@ -15,6 +18,11 @@ const PatientList = ({ patients }) => {
         }
     };
 
+    const updateSelection = (value) => {
+        document.getElementById('viewOption').value = value;
+        handleViewOptionChange({ target: { value } });
+    };
+    
     const totalPages = Math.ceil(patients.length / numPerPage);
 
     const handlePageChange = (page) => {
@@ -26,46 +34,62 @@ const PatientList = ({ patients }) => {
         currentPage * numPerPage
     );
 
+    const handleTabChange = (tabName) => {
+        setActiveTab(tabName);
+    };
+
     return (
         <div className="container main mt-5">
             {/* Navigation Tabs */}
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item" role="presentation">
-                    <button
-                        className="nav-link active"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls="home"
-                        aria-selected="true"
-                    >
+                <button
+                    className={`nav-link ${activeTab === 'patients' ? 'active' : ''}`}
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home"
+                    type="button"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected={activeTab === 'patients'}
+                    onClick={() => handleTabChange('patients')}
+                >
                         Patients
                     </button>
                 </li>
                 <li className="nav-item" role="presentation">
-                    <button
-                        className="nav-link"
-                        id="profile-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#profile"
-                        type="button"
-                        role="tab"
-                        aria-controls="profile"
-                        aria-selected="false"
-                    >
+                <button
+                    className={`nav-link ${activeTab === 'addPatient' ? 'active' : ''}`}
+                    id="profile-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected={activeTab === 'addPatient'}
+                    onClick={() => handleTabChange('addPatient')}
+                >
                         + Add Patient
                     </button>
                 </li>
             </ul>
 
             {/* View Options Dropdown */}
+            {activeTab === 'patients' && (
             <div className="mb-3 d-flex flex-row-reverse">
                 <label htmlFor="viewOption" className="form-label"></label>
+                <div className="dropdown">
+                    <button className="btn btn m-2 border dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        {numPerPage === patients.length ? "View All" : "View 10"}
+                    </button>
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a className="dropdown-item" onClick={() => updateSelection("10")}>View 10</a></li>
+                        <li><a className="dropdown-item" onClick={() => updateSelection("all")}>View All</a></li>
+                    </ul>
+                </div>
                 <select
                     id="viewOption"
-                    className="w-auto form-select"
+                    className="d-none"
                     value={numPerPage === patients.length ? "all" : "10"}
                     onChange={handleViewOptionChange}
                 >
@@ -73,9 +97,10 @@ const PatientList = ({ patients }) => {
                     <option value="all">View All</option>
                 </select>
             </div>
+            )}
 
             {/* Pagination Buttons */}
-            {totalPages > 1 && (
+            {activeTab === 'patients' && totalPages > 1 && (
                 <nav>
                     <ul className="pagination justify-content-center">
                         {Array.from({ length: totalPages }).map((_, index) => (
@@ -133,7 +158,7 @@ const PatientList = ({ patients }) => {
                     role="tabpanel"
                     aria-labelledby="profile-tab"
                 >
-                    Add a patient
+                    <AddPatientForm />
                 </div>
             </div>
         </div>
