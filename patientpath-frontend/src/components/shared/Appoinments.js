@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 import { Link, Outlet } from 'react-router-dom';
 
-const Appointments = () => {
+const Appointments = (props) => {
+    console.log(props.getEvents)
     return ( 
         <div
             className="container table-responsive main mt-5"
@@ -12,65 +13,31 @@ const Appointments = () => {
                     <FontAwesomeIcon icon={faList} /> Add Appointment
                 </button>
             </Link>
-            
-            <table  
+
+            <table
                 className="table table-striped table-hover table-borderless table-primary align-middle"
             >
                 <thead className="table-light">
                     <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                        <th>Column 4</th>
-                        <th>Column 5</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Start</th>
+                        <th>Duration (min)</th>
+                        <th>Reason</th>
+                        <th>Provider</th>
                     </tr>
                 </thead>
                 <tbody className="table-group-divider">
-                    <tr
-                        className="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
-                    <tr
-                        className="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
-                    <tr
-                        className="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
-                    <tr
-                        className="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
-                    <tr
-                        className="table-primary"
-                    >
-                        <td scope="row">Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                    </tr>
+                    {props.getEvents.map(event => (
+                        <tr className="table-primary">
+                            <td>{event.title}</td>
+                            <td>{new Date(event.start).toString().split(" ").splice(0,4).join(" ")}</td>
+                            <td>{new Date(event.start).toLocaleTimeString()}</td>
+                            <td>{(new Date(event.end).getTime() - new Date(event.start).getTime())/60000}</td>
+                            <td>{event.reason}</td>
+                            <td>{event.provider}</td>
+                        </tr>
+                    ))}
                 </tbody>
                 <tfoot>
                     

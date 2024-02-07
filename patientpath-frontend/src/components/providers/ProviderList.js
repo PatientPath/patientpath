@@ -1,86 +1,145 @@
-const ProviderList = () => {
-    return ( 
+import React, { useState } from 'react';
+import AddProviderForm from './AddProviderForm';
+
+const ProviderList = ({ providers }) => {
+    const [numPerPage, setNumPerPage] = useState(10);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [activeTab, setActiveTab] = useState('providers');
+    const [viewOption, setViewOption] = useState('10');
+
+    const handleViewOptionChange = (e) => {
+        const value = e.target.value;
+        setNumPerPage(value === "10" ? 10 : providers.length);
+        setCurrentPage(1);
+        setViewOption(value);
+    };
+
+    const totalPages = Math.ceil(providers.length / numPerPage);
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
+
+    const visibleProviders = providers.slice(
+        (currentPage - 1) * numPerPage,
+        currentPage * numPerPage
+    );
+
+    const handleTabChange = (tabName) => {
+        setActiveTab(tabName);
+    };
+
+    return (
         <div className="container main mt-5">
-            {/* <!-- Nav tabs --> */}
             <ul className="nav nav-tabs" id="myTab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button
-                        className="nav-link active"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
+                        className={`nav-link ${activeTab === 'providers' ? 'active' : ''}`}
+                        id="providers-tab"
                         type="button"
                         role="tab"
-                        aria-controls="home"
-                        aria-selected="true"
+                        aria-controls="providers"
+                        aria-selected={activeTab === 'providers'}
+                        onClick={() => handleTabChange('providers')}
                     >
                         Providers
                     </button>
                 </li>
                 <li className="nav-item" role="presentation">
                     <button
-                        className="nav-link"
-                        id="profile-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#profile"
+                        className={`nav-link ${activeTab === 'addProvider' ? 'active' : ''}`}
+                        id="add-provider-tab"
                         type="button"
                         role="tab"
-                        aria-controls="profile"
-                        aria-selected="false"
+                        aria-controls="addProvider"
+                        aria-selected={activeTab === 'addProvider'}
+                        onClick={() => handleTabChange('addProvider')}
                     >
-                       + Add Provider
+                        + Add Provider
                     </button>
                 </li>
             </ul>
-            
-            {/* <!-- Tab panes --> */}
+
+            {activeTab === 'providers' && (
+                <div className="mb-3 d-flex flex-row-reverse">
+                    <div className="dropdown">
+                        <button className="btn btn m-2 border dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            {numPerPage === providers.length ? "View All" : "View 10"}
+                        </button>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <button className="dropdown-item" onClick={() => handleViewOptionChange({ target: { value: "10" } })}>View 10</button>
+                        </li>
+                        <li>
+                            <button className="dropdown-item" onClick={() => handleViewOptionChange({ target: { value: "all" } })}>View All</button>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            )}
+
+            {activeTab === 'providers' && totalPages > 1 && (
+                <nav>
+                    <ul className="pagination justify-content-center">
+                        {Array.from({ length: totalPages }).map((_, index) => (
+                            <li
+                                key={index}
+                                className={`page-item ${currentPage === index + 1 ? "active" : ""}`}
+                            >
+                                <button
+                                    className="page-link"
+                                    onClick={() => handlePageChange(index + 1)}
+                                >
+                                    {index + 1}
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+            )}
+
             <div className="tab-content">
                 <div
-                    className="tab-pane active"
-                    id="home"
+                    className={`tab-pane ${activeTab === 'providers' ? 'active' : ''}`}
+                    id="providers"
                     role="tabpanel"
-                    aria-labelledby="home-tab"
+                    aria-labelledby="providers-tab"
                 >
-                    <div
-                        className="table-responsive"
-                    >
-                        <table
-                            className="table table-primary"
-                        >
+                    <div className="table-responsive">
+                        <table className="table table-primary">
                             <thead>
                                 <tr>
-                                    <th scope="col">Column 1</th>
-                                    <th scope="col">Column 2</th>
-                                    <th scope="col">Column 3</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Specialization</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Email</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr className="">
-                                    <td scope="row">R1C1</td>
-                                    <td>R1C2</td>
-                                    <td>R1C3</td>
-                                </tr>
-                                <tr className="">
-                                    <td scope="row">Item</td>
-                                    <td>Item</td>
-                                    <td>Item</td>
-                                </tr>
+                                {visibleProviders.map((provider) => (
+                                    <tr key={provider.providerId}>
+                                        <td>{provider.name}</td>
+                                        <td>{provider.specialization}</td>
+                                        <td>{provider.contact.phone}</td>
+                                        <td>{provider.contact.email}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
-                    
                 </div>
+
                 <div
-                    className="tab-pane"
-                    id="profile"
+                    className={`tab-pane ${activeTab === 'addProvider' ? 'active' : ''}`}
+                    id="addProvider"
                     role="tabpanel"
-                    aria-labelledby="profile-tab"
+                    aria-labelledby="add-provider-tab"
                 >
-                     Add a provider 
+                    <AddProviderForm />
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
+
 export default ProviderList;
